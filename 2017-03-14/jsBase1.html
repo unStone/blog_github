@@ -121,7 +121,7 @@
 <meta property="og:description" content="写在前面最近总是有莫名的压力呀，年纪小的技术比我好，基础比我扎实，这个不是什么好迹象，现在开始重拾js基础，以前做的承诺真是极少实现了呀！
 一些容易遗忘的概念严格模式ECMAScript5引入严格模式12“use strict”;//函数体
 关键字关键字可用来表示控制语句的开始或结束，或者用于执行特定操作break  case  catch  continue  debugger  default">
-<meta property="og:updated_time" content="2017-03-14T16:03:22.956Z">
+<meta property="og:updated_time" content="2017-03-15T17:12:13.492Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js基础">
 <meta name="twitter:description" content="写在前面最近总是有莫名的压力呀，年纪小的技术比我好，基础比我扎实，这个不是什么好迹象，现在开始重拾js基础，以前做的承诺真是极少实现了呀！
@@ -420,11 +420,10 @@
 
       
         <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>最近总是有莫名的压力呀，年纪小的技术比我好，基础比我扎实，这个不是什么好迹象，现在开始重拾js基础，以前做的承诺真是极少实现了呀！</p>
-<h1 id="一些容易遗忘的概念"><a href="#一些容易遗忘的概念" class="headerlink" title="一些容易遗忘的概念"></a>一些容易遗忘的概念</h1><p><strong>严格模式</strong><br>ECMAScript5引入严格模式<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">“use strict”;</div><div class="line">//函数体</div></pre></td></tr></table></figure></p>
-<p><strong>关键字</strong><br>关键字可用来表示控制语句的开始或结束，或者用于执行特定操作<br>break  case  catch  continue  <strong>debugger</strong>  <strong>default</strong>  delete  do  else  finally  for  function  if  in  instanceof  new  return  switch  this  throw  try  typeof  var  <strong>void</strong>  while  with</p>
-<p><strong>保留字</strong><br>保留下来，以后可能被用作关键字<br>abstract  boolean  byte  char  class  const  debugger  double  enum  export  extends  final  float  goto  implements  import  int interface  let  long  native  package  private  protected  public  short  static  super  synchronized  throws  transient  volatile yield</p>
-<p><strong>数据类型转化</strong></p>
-<table>
+<h1 id="一些容易遗忘的概念"><a href="#一些容易遗忘的概念" class="headerlink" title="一些容易遗忘的概念"></a>一些容易遗忘的概念</h1><h2 id="严格模式"><a href="#严格模式" class="headerlink" title="严格模式"></a>严格模式</h2><p>ECMAScript5引入严格模式<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">“use strict”;</div><div class="line">//函数体</div></pre></td></tr></table></figure></p>
+<h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><p>关键字可用来表示控制语句的开始或结束，或者用于执行特定操作<br>break  case  catch  continue  <strong>debugger</strong>  <strong>default</strong>  delete  do  else  finally  for  function  if  in  instanceof  new  return  switch  this  throw  try  typeof  var  <strong>void</strong>  while  with</p>
+<h2 id="保留字"><a href="#保留字" class="headerlink" title="保留字"></a>保留字</h2><p>保留下来，以后可能被用作关键字<br>abstract  boolean  byte  char  class  const  debugger  double  enum  export  extends  final  float  goto  implements  import  int interface  let  long  native  package  private  protected  public  short  static  super  synchronized  throws  transient  volatile yield</p>
+<h2 id="数据类型转化"><a href="#数据类型转化" class="headerlink" title="数据类型转化"></a>数据类型转化</h2><table>
 <thead>
 <tr>
 <th>数据类型</th>
@@ -438,8 +437,37 @@
 <td style="text-align:center">true</td>
 <td style="text-align:right">false</td>
 </tr>
+<tr>
+<td>string</td>
+<td style="text-align:center">任何非空字符串</td>
+<td style="text-align:right">“”（空字符串）</td>
+</tr>
+<tr>
+<td>Number</td>
+<td style="text-align:center">任何非零数字值（包括无穷大）</td>
+<td style="text-align:right">0和NaN</td>
+</tr>
+<tr>
+<td>Obeject</td>
+<td style="text-align:center">任何对象</td>
+<td style="text-align:right">null</td>
+</tr>
+<tr>
+<td>Undefined</td>
+<td style="text-align:center">N/A（not aoolicable 不适用）</td>
+<td style="text-align:right">undefined</td>
+</tr>
 </tbody>
 </table>
+<h2 id="0与-0"><a href="#0与-0" class="headerlink" title="+0与-0"></a>+0与-0</h2><p>+0 === -0 //true</p>
+<h2 id="浮点数值"><a href="#浮点数值" class="headerlink" title="浮点数值"></a>浮点数值</h2><p>浮点数值的最高精度是17位小数<br>浮点数值就是该数值中必须包含一个小数点，并且小数点后面必须至少有一位数字。（小数点前面可以没有整数但是<strong>不推荐</strong>）<br>保存浮点数值需要的内存是保存整数的两倍，因此ECMAScript会不失实际的将浮点数值转化为整数数值</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var floatNum1 = 1.;      //小数点后面没有数字————解析为1</div><div class="line">var floatNum2 = 12.0     //整数————解析为10</div><div class="line"></div><div class="line">var floatNum3 = 3.125e7; //等于31250000 </div><div class="line">用e表示法表示的数值等于e前面的数值乘以10的指数次幂（e前面可以是整数型也可以是浮点型，中间一个大写或小写的e，后面是10的幂中的指数）</div></pre></td></tr></table></figure>
+<p>ECMAScript会将那些小数点后面带有六个零以上的浮点数值转换为以e表示法表示(0.0000003 被转换为 3e-7）<br><strong>浮点计算会产生舍入误差</strong></p>
+<h2 id="数值范围"><a href="#数值范围" class="headerlink" title="数值范围"></a>数值范围</h2><p>ECMAScript中不能保存世界上所有的数值，最小值保存在Number.MIN_VALUE中（一般为5e-324），最大值保存在Number.MAX_VALUE中（一般为1.7976931348623157e+308）<br>当计算值超出js的数值范围则会被转换为-Infinity（负无穷）、Infinity（正无穷）<br>当计算的值不在数值范围内则不参与下次计算，可以用isFinite()函数查看该值是否为无穷数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var result = Number.MAX_VALUE + Number.MAX_VALUE;</div><div class="line">alert(isFinite(result));                            //false</div></pre></td></tr></table></figure></p>
+<h2 id="NaN"><a href="#NaN" class="headerlink" title="NaN"></a>NaN</h2><p>NaN(Not a Number),即非数值，表示一个本来期望返回数值的操作数为返回数值的情况</p>
+<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>任何涉及NaN的操作（列如NaN/10）都会返回NaN<br>NaN与任何值都不相等，包括NaN本身<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert(NaN == NaN); //false</div></pre></td></tr></table></figure></p>
+<h3 id="isNaN"><a href="#isNaN" class="headerlink" title="isNaN()"></a>isNaN()</h3><p>这个函数接受一个任意类型的参数，函数在接收到值后会尝试将这个值转化为数值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">alert(isNaN(NaN));                     //true</div><div class="line">alert(isNaN(10));                      //false(10是一个数值)</div><div class="line">alert(isNaN(&apos;10&apos;));                    //false(可以被转换为数值10)</div><div class="line">alert(isNaN(&apos;blue&apos;));                  //true(不能转换成数值)</div><div class="line">alert(isNaN(true));                    //false(可以被转换成数值1)</div></pre></td></tr></table></figure></p>
+<h2 id="数值转换"><a href="#数值转换" class="headerlink" title="数值转换"></a>数值转换</h2><h3 id="非数值转换为数值"><a href="#非数值转换为数值" class="headerlink" title="非数值转换为数值"></a>非数值转换为数值</h3><h4 id="Number"><a href="#Number" class="headerlink" title="Number()"></a>Number()</h4><p>可以用于任何数据类型<br>如果是boolean值，true和false</p>
 
       
     </div>
@@ -506,6 +534,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017-03-15/npm.html" rel="prev" title="npm">
+                npm <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -581,7 +613,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -672,7 +704,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一些容易遗忘的概念"><span class="nav-number">2.</span> <span class="nav-text">一些容易遗忘的概念</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一些容易遗忘的概念"><span class="nav-number">2.</span> <span class="nav-text">一些容易遗忘的概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#严格模式"><span class="nav-number">2.1.</span> <span class="nav-text">严格模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键字"><span class="nav-number">2.2.</span> <span class="nav-text">关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#保留字"><span class="nav-number">2.3.</span> <span class="nav-text">保留字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型转化"><span class="nav-number">2.4.</span> <span class="nav-text">数据类型转化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0与-0"><span class="nav-number">2.5.</span> <span class="nav-text">+0与-0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮点数值"><span class="nav-number">2.6.</span> <span class="nav-text">浮点数值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数值范围"><span class="nav-number">2.7.</span> <span class="nav-text">数值范围</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NaN"><span class="nav-number">2.8.</span> <span class="nav-text">NaN</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特点"><span class="nav-number">2.8.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#isNaN"><span class="nav-number">2.8.2.</span> <span class="nav-text">isNaN()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数值转换"><span class="nav-number">2.9.</span> <span class="nav-text">数值转换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#非数值转换为数值"><span class="nav-number">2.9.1.</span> <span class="nav-text">非数值转换为数值</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Number"><span class="nav-number">2.9.1.1.</span> <span class="nav-text">Number()</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>

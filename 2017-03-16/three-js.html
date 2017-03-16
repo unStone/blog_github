@@ -95,7 +95,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="blog, 前端" />
+  <meta name="keywords" content="canvas,3D,学习," />
 
 
 
@@ -111,19 +111,22 @@
 
 
 
-<meta name="description" content="dependencies运行依赖编译依赖：Bable
-devDependencies测试依赖开发工具依赖">
+<meta name="description" content="写在前面最近开了很多篇文章，但是都只写了一点点，但是我都想学呀，所以每篇文章想到的时候就加一点。应该没有什么关系吧！
+Three.js的简介什么是Three.jsThree.js（https://github.com/mrdoob/three.js）是一个JavaScript 3D库，封装了底层的WebGL图形接口，提供简化、高效的三维图形程序开发。使用Three.js可以使你在不了解图形学知识的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="npm">
-<meta property="og:url" content="http://ssstone.cn/2017-03-15/npm.html">
+<meta property="og:title" content="three-js">
+<meta property="og:url" content="http://ssstone.cn/2017-03-16/three-js.html">
 <meta property="og:site_name" content="三生石@部落格">
-<meta property="og:description" content="dependencies运行依赖编译依赖：Bable
-devDependencies测试依赖开发工具依赖">
-<meta property="og:updated_time" content="2017-03-16T05:33:28.114Z">
+<meta property="og:description" content="写在前面最近开了很多篇文章，但是都只写了一点点，但是我都想学呀，所以每篇文章想到的时候就加一点。应该没有什么关系吧！
+Three.js的简介什么是Three.jsThree.js（https://github.com/mrdoob/three.js）是一个JavaScript 3D库，封装了底层的WebGL图形接口，提供简化、高效的三维图形程序开发。使用Three.js可以使你在不了解图形学知识的">
+<meta property="og:image" content="http://om74i7lqp.bkt.clouddn.com/01YYdCnhfW2V.png">
+<meta property="og:image" content="http://om74i7lqp.bkt.clouddn.com/dwohoiwqneoi12e.png">
+<meta property="og:updated_time" content="2017-03-16T10:11:04.182Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="npm">
-<meta name="twitter:description" content="dependencies运行依赖编译依赖：Bable
-devDependencies测试依赖开发工具依赖">
+<meta name="twitter:title" content="three-js">
+<meta name="twitter:description" content="写在前面最近开了很多篇文章，但是都只写了一点点，但是我都想学呀，所以每篇文章想到的时候就加一点。应该没有什么关系吧！
+Three.js的简介什么是Three.jsThree.js（https://github.com/mrdoob/three.js）是一个JavaScript 3D库，封装了底层的WebGL图形接口，提供简化、高效的三维图形程序开发。使用Three.js可以使你在不了解图形学知识的">
+<meta name="twitter:image" content="http://om74i7lqp.bkt.clouddn.com/01YYdCnhfW2V.png">
 
 
 
@@ -151,13 +154,13 @@ devDependencies测试依赖开发工具依赖">
 
 
 
-  <link rel="canonical" href="http://ssstone.cn/2017-03-15/npm.html"/>
+  <link rel="canonical" href="http://ssstone.cn/2017-03-16/three-js.html"/>
 
 
 
 
 
-  <title> npm | 三生石@部落格 </title>
+  <title> three-js | 三生石@部落格 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -334,7 +337,7 @@ devDependencies测试依赖开发工具依赖">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://ssstone.cn/2017-03-15/npm.html">
+    <link itemprop="mainEntityOfPage" href="http://ssstone.cn/2017-03-16/three-js.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="三生石">
@@ -355,7 +358,7 @@ devDependencies测试依赖开发工具依赖">
             
             
               
-                npm
+                three-js
               
             
           </h1>
@@ -370,8 +373,8 @@ devDependencies测试依赖开发工具依赖">
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-15T00:45:42+08:00">
-                2017-03-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-16T13:34:15+08:00">
+                2017-03-16
               </time>
             
 
@@ -389,8 +392,8 @@ devDependencies测试依赖开发工具依赖">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017-03-15/npm.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017-03-15/npm.html" itemprop="commentCount"></span>
+                <a href="/2017-03-16/three-js.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017-03-16/three-js.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -416,8 +419,21 @@ devDependencies测试依赖开发工具依赖">
       
 
       
-        <h2 id="dependencies"><a href="#dependencies" class="headerlink" title="dependencies"></a>dependencies</h2><p>运行依赖<br>编译依赖：Bable</p>
-<h2 id="devDependencies"><a href="#devDependencies" class="headerlink" title="devDependencies"></a>devDependencies</h2><p>测试依赖<br>开发工具依赖</p>
+        <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>最近开了很多篇文章，但是都只写了一点点，但是我都想学呀，所以每篇文章想到的时候就加一点。应该没有什么关系吧！</p>
+<h1 id="Three-js的简介"><a href="#Three-js的简介" class="headerlink" title="Three.js的简介"></a>Three.js的简介</h1><h2 id="什么是Three-js"><a href="#什么是Three-js" class="headerlink" title="什么是Three.js"></a>什么是Three.js</h2><p>Three.js（<a href="https://github.com/mrdoob/three.js）是一个JavaScript" target="_blank" rel="external">https://github.com/mrdoob/three.js）是一个JavaScript</a> 3D库，封装了底层的WebGL图形接口，提供简化、高效的三维图形程序开发。使用Three.js可以使你在不了解图形学知识的前提下，快速方便地开发三维图形应用。</p>
+<h2 id="什么是WebGL"><a href="#什么是WebGL" class="headerlink" title="什么是WebGL"></a>什么是WebGL</h2><p>WebGL（Web图形库）是Web上的3D图形的新标准，它是专用于绘制2D图形和交互式3D图形的目的。它是从OpenGL ES 2.0库，用于手机和其他移动设备的低级3D的API衍生。 WebGL提供ES2.0（嵌入式系统）类似的功能并在现代3D图形硬件上表现优异。</p>
+<p>它可以与HTML5使用一个JavaScript的API。 HTML5有几个功能，支持3D图形，如2D画布，WebGL，SVG，CSS3D变换和SMIL。</p>
+<p>WebGL代码编写在HTML5的canvas标签内。它是一种规范，允许互联网浏览器使用的计算机访问图形处理单元（GPU）。</p>
+<p><strong>WebGL教程</strong><a href="http://www.yiibai.com/webgl/webgl_graphics_basics.html" target="_blank" rel="external">传送门</a></p>
+<h1 id="开始Three-js"><a href="#开始Three-js" class="headerlink" title="开始Three.js"></a>开始Three.js</h1><h2 id="创建一个场景"><a href="#创建一个场景" class="headerlink" title="创建一个场景"></a>创建一个场景</h2><p>如需要展示一些画面需要三样东西<br>一个场景(scene)<br>一个摄像头(camera)<br>一个渲染器(renderer)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">//创建一个场景</div><div class="line">var scene = new THREE.Scene();</div><div class="line">/*</div><div class="line"> * perspectiveCamera的摄像头</div><div class="line"> * 报修人员数据情况，fixPersonData</div><div class="line"> * @param &#123;number&#125; 1 视角</div><div class="line"> * @param &#123;number&#125; 2 拍下来的长宽比</div><div class="line"> * @param &#123;number&#125; 3、4 远近裁剪平面</div><div class="line"> */</div><div class="line">var camera = new THREE.perspectiveCamera(75，window.innerWidth / window.innerHeight, 0.1, 1000)</div><div class="line">//创建渲染器</div><div class="line">var renderer = new THREE.WebGLRenderer();</div><div class="line">//渲染器的大小</div><div class="line">renderer.setSize(wndow.innerWidth, window.innerHeight);</div><div class="line">//在document.body中插入renderer.domElement</div><div class="line">document.body.appendChild(renderer.domElement)</div></pre></td></tr></table></figure>
+<h3 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h3><p>创建一个场景<br><code>var scene = new THREE.Scene();</code><br>在场景中添加物体<br><code>scene.add(boj)</code><br>在场景中移除物体<br><code>scene.remove(obj)</code><br>获取场景中所有子对象的列表<br><code>scene.children()</code><br>利用name属性，获取场景中某个特定的物体<br><code>scene.getChildByName()</code></p>
+<h3 id="照相机"><a href="#照相机" class="headerlink" title="照相机"></a>照相机</h3><p>使用Three.js创建的场景是三维的，而通常情况下显示屏是二维的，那么三维的场景如何显示到二维的显示屏上呢？照相机就是这样一个抽象，它定义了三维空间到二维屏幕的投影方式，用“照相机”这样一个类比，可以使我们直观地理解这一投影方式。而针对投影方式的不同，照相机又分为正交投影照相机与透视投影照相机。使用透视投影照相机获得的结果是类似人眼在真实世界中看到的有“近大远小”的效果；而使用正交投影照相机获得的结果就像我们在数学几何学课上老师教我们画的效果，对于在三维空间内平行的线，投影到二维空间中也一定是平行的。一般说来，对于制图、建模软件通常使用正交投影，这样不会因为投影而改变物体比例；而对于其他大多数应用，通常使用透视投影，因为这更接近人眼的观察效果。</p>
+<h4 id="正交照相机vs透视照相机"><a href="#正交照相机vs透视照相机" class="headerlink" title="正交照相机vs透视照相机"></a>正交照相机vs透视照相机</h4><p>使用<strong>透视投影照相机</strong>获得的结果是类似人眼在真实世界中看到的有“近大远小”的效果（如下图中的(a)）；<br>使用<strong>正交投影照相机</strong>获得的结果就像我们在数学几何学课上老师教我们画的效果，对于在三维空间内平行的线，投影到二维空间中也一定是平行的（如下图中的(b)）</p>
+<p><img src="http://om74i7lqp.bkt.clouddn.com/01YYdCnhfW2V.png" alt="正交照相机与透视照相机"></p>
+<h4 id="正交投影照相机"><a href="#正交投影照相机" class="headerlink" title="正交投影照相机"></a>正交投影照相机</h4><p>正交投影的设置<br><code>THREE.OrthographicCamera(left, right, top, bottom, near, far)</code><br>这六个参数分别代表正交投影照相机拍摄到的空间的六个面的位置（如下图），这六个面围成一个长方体，我们称其为<strong>视景体</strong>（Frustum）。只有在视景体内部（下图中的灰色部分）的物体才可能显示在屏幕上，而视景体外的物体会在显示之前被裁减掉。</p>
+<p><img src="http://om74i7lqp.bkt.clouddn.com/dwohoiwqneoi12e.png" alt="正交投影照相机"></p>
+<p>near与far都是指到照相机位置在深度平面的位置，而照相机不应该拍摄到其后方的物体，因此这两个值应该均为正值。为了保证场景中的物体不会因为太近或太远而被照相机忽略，一般near的值设置得较小，far的值设置得较大，具体值视场景中物体的位置等决定。</p>
 
       
     </div>
@@ -460,6 +476,16 @@ devDependencies测试依赖开发工具依赖">
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/canvas/" rel="tag"># canvas</a>
+          
+            <a href="/tags/3D/" rel="tag"># 3D</a>
+          
+            <a href="/tags/学习/" rel="tag"># 学习</a>
+          
+        </div>
+      
 
       
         
@@ -469,8 +495,8 @@ devDependencies测试依赖开发工具依赖">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017-03-14/jsBase1.html" rel="next" title="js基础">
-                <i class="fa fa-chevron-left"></i> js基础
+              <a href="/2017-03-15/npm.html" rel="next" title="npm">
+                <i class="fa fa-chevron-left"></i> npm
               </a>
             
           </div>
@@ -478,10 +504,6 @@ devDependencies测试依赖开发工具依赖">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017-03-16/three-js.html" rel="prev" title="three-js">
-                three-js <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -507,8 +529,8 @@ devDependencies测试依赖开发工具依赖">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017-03-15/npm.html"
-           data-title="npm" data-url="http://ssstone.cn/2017-03-15/npm.html">
+      <div class="ds-thread" data-thread-key="2017-03-16/three-js.html"
+           data-title="three-js" data-url="http://ssstone.cn/2017-03-16/three-js.html">
       </div>
     
   </div>
@@ -648,7 +670,7 @@ devDependencies测试依赖开发工具依赖">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#dependencies"><span class="nav-number">1.</span> <span class="nav-text">dependencies</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#devDependencies"><span class="nav-number">2.</span> <span class="nav-text">devDependencies</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Three-js的简介"><span class="nav-number">2.</span> <span class="nav-text">Three.js的简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是Three-js"><span class="nav-number">2.1.</span> <span class="nav-text">什么是Three.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是WebGL"><span class="nav-number">2.2.</span> <span class="nav-text">什么是WebGL</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开始Three-js"><span class="nav-number">3.</span> <span class="nav-text">开始Three.js</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建一个场景"><span class="nav-number">3.1.</span> <span class="nav-text">创建一个场景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#场景"><span class="nav-number">3.1.1.</span> <span class="nav-text">场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#照相机"><span class="nav-number">3.1.2.</span> <span class="nav-text">照相机</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#正交照相机vs透视照相机"><span class="nav-number">3.1.2.1.</span> <span class="nav-text">正交照相机vs透视照相机</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正交投影照相机"><span class="nav-number">3.1.2.2.</span> <span class="nav-text">正交投影照相机</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>

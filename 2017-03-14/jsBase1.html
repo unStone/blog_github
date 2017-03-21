@@ -115,15 +115,15 @@
 一些容易遗忘的概念严格模式ECMAScript5引入严格模式12“use strict”;//函数体
 关键字关键字可用来表示控制语句的开始或结束，或者用于执行特定操作break  case  catch  continue  debugger  default">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js基础">
+<meta property="og:title" content="js基础（1）">
 <meta property="og:url" content="http://ssstone.cn/2017-03-14/jsBase1.html">
 <meta property="og:site_name" content="三生石@部落格">
 <meta property="og:description" content="写在前面最近总是有莫名的压力呀，年纪小的技术比我好，基础比我扎实，这个不是什么好迹象，现在开始重拾js基础，以前做的承诺真是极少实现了呀！
 一些容易遗忘的概念严格模式ECMAScript5引入严格模式12“use strict”;//函数体
 关键字关键字可用来表示控制语句的开始或结束，或者用于执行特定操作break  case  catch  continue  debugger  default">
-<meta property="og:updated_time" content="2017-03-17T01:55:48.000Z">
+<meta property="og:updated_time" content="2017-03-21T15:27:43.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js基础">
+<meta name="twitter:title" content="js基础（1）">
 <meta name="twitter:description" content="写在前面最近总是有莫名的压力呀，年纪小的技术比我好，基础比我扎实，这个不是什么好迹象，现在开始重拾js基础，以前做的承诺真是极少实现了呀！
 一些容易遗忘的概念严格模式ECMAScript5引入严格模式12“use strict”;//函数体
 关键字关键字可用来表示控制语句的开始或结束，或者用于执行特定操作break  case  catch  continue  debugger  default">
@@ -160,7 +160,7 @@
 
 
 
-  <title> js基础 | 三生石@部落格 </title>
+  <title> js基础（1） | 三生石@部落格 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -358,7 +358,7 @@
             
             
               
-                js基础
+                js基础（1）
               
             
           </h1>
@@ -467,9 +467,43 @@
 <h2 id="NaN"><a href="#NaN" class="headerlink" title="NaN"></a>NaN</h2><p>NaN(Not a Number),即非数值，表示一个本来期望返回数值的操作数为返回数值的情况</p>
 <h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>任何涉及NaN的操作（列如NaN/10）都会返回NaN<br>NaN与任何值都不相等，包括NaN本身<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert(NaN == NaN); //false</div></pre></td></tr></table></figure></p>
 <h3 id="isNaN"><a href="#isNaN" class="headerlink" title="isNaN()"></a>isNaN()</h3><p>这个函数接受一个任意类型的参数，函数在接收到值后会尝试将这个值转化为数值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">alert(isNaN(NaN));                     //true</div><div class="line">alert(isNaN(10));                      //false(10是一个数值)</div><div class="line">alert(isNaN(&apos;10&apos;));                    //false(可以被转换为数值10)</div><div class="line">alert(isNaN(&apos;blue&apos;));                  //true(不能转换成数值)</div><div class="line">alert(isNaN(true));                    //false(可以被转换成数值1)</div></pre></td></tr></table></figure></p>
-<h2 id="数值转换"><a href="#数值转换" class="headerlink" title="数值转换"></a>数值转换</h2><h3 id="非数值转换为数值"><a href="#非数值转换为数值" class="headerlink" title="非数值转换为数值"></a>非数值转换为数值</h3><h4 id="Number"><a href="#Number" class="headerlink" title="Number()"></a>Number()</h4><p>可以用于任何数据类型<br>如果是boolean值，true和false将分别转换为1和0<br>如果这些是数字值，只是简单地传入和返回<br>如果是null值，返回0<br>如果是undefined，返回NaN<br>如果字符串则<br>①：字符串只包含数字，则转化为十进制数值。（’011’会变成11，前导的零被忽略）<br>②：如果字符串中包含有效的浮点型数值，则转换成对应的浮点数值（忽略前导）<br>③：如果字符串内含有有效的十六进制格式（’0xf’则将其转换为十进制数值）<br>④：如果字符串是空的，则将其转换为0<br>⑤：如果字符串中不包含上述格式的字符，则转换为NaN<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Number(&apos;hahahha&apos;)              //NaN</div><div class="line">Number(&apos;&apos;)                     //0</div><div class="line">Number(&apos;000011&apos;)               //11</div><div class="line">Number(true)                   //1</div></pre></td></tr></table></figure></p>
+<h2 id="数值转换"><a href="#数值转换" class="headerlink" title="数值转换"></a>数值转换</h2><h3 id="非数值转换为数值"><a href="#非数值转换为数值" class="headerlink" title="非数值转换为数值"></a>非数值转换为数值</h3><h4 id="Number"><a href="#Number" class="headerlink" title="Number()"></a>Number()</h4><p>可以用于任何数据类型<br>如果是boolean值，true和false将分别转换为1和0<br>如果这些是数字值，只是简单地传入和返回<br>如果是null值，返回0<br>如果是undefined，返回NaN<br>如果字符串则<br>①：字符串只包含数字，则转化为十进制数值。（’011’会变成11，前导的零被忽略）<br>②：如果字符串中包含有效的浮点型数值，则转换成对应的浮点数值（忽略前导）<br>③：如果字符串内含有有效的十六进制格式（’0xf’则将其转换为十进制数值）<br>④：如果字符串是空的，则将其转换为0<br>⑤：如果字符串中不包含上述格式的字符，则转换为NaN<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Number(&apos;hahahha&apos;)              //NaN</div><div class="line">Number(&apos;&apos;)                     //0</div><div class="line">Number(&apos;000011&apos;)               //11</div><div class="line">Number(true)                   //1</div><div class="line">Number(&apos;012&apos;)                  //10 八进制</div><div class="line">Number(&apos;0x12&apos;)                 //18 十六进制</div></pre></td></tr></table></figure></p>
 <h4 id="parseInt"><a href="#parseInt" class="headerlink" title="parseInt()"></a>parseInt()</h4><p>parseInt()函数在转换字符串时，更多的是看其是否符合数值模式，它会忽略字符串前面的空格，直到找到第一个字符不是空格<br>如果第一个字符不是数字或者负号则返回NaN<br>如果字符串为空也返回NaN<br>如果第一个是数字字符，parseInt()函数会继续解析第二个字符，直到完全解析或者遇到一个非数字字符。<br>如果遇到字符串以’0x’后面跟着有效字符（数字||A-f）则视为16进制，如遇到以’0’开头后面跟数字则视为8进制(ECMAScript3视为8进制，ECMAScript5视为10进制)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">parseInt(&apos;152aaa&apos;)          //152</div><div class="line">parseInt(&apos;&apos;)                //NaN</div><div class="line">parseInt(&apos;0xA&apos;)             //10(16进制)</div><div class="line">parseInt(&apos;22.5&apos;)            //22</div><div class="line">parseInt(&apos;070&apos;)             //70</div><div class="line">parseInt(&apos;70&apos;, 8)           //56(8进制)</div><div class="line">parseInt(&apos;70&apos;, 16)          //112(16进制)</div></pre></td></tr></table></figure></p>
-<h4 id="parseFloat"><a href="#parseFloat" class="headerlink" title="parseFloat()"></a>parseFloat()</h4>
+<h4 id="parseFloat"><a href="#parseFloat" class="headerlink" title="parseFloat()"></a>parseFloat()</h4><ul>
+<li>与parseInt类似，也是从第一个字符开始开始解析,但是不止于第一个小数点，第二个小数点就终止了。</li>
+<li>与parseInt不同的是，他始终忽略前导的零。</li>
+<li>parseFloat可以识别前面说过的所有的浮点类型的数据，但是十六进制的数将会一直转化为0，parseFloat只解析十进制</li>
+<li>如果如果字符串包含的是一个可以解析为整数的数（没有小数点或者小数点后面都是0）。parseFloat将返回整数<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">parseFloat(&apos;1234blue&apos;)      //1234</div><div class="line">parseFloat(&apos;   12.31&apos;)      //12.31</div><div class="line">parseFloat(&apos;0xf&apos;)           //0</div><div class="line">parseFloat(&apos;0988.00000&apos;)    //988</div><div class="line">parseFloat(&apos;5.2873e7&apos;)      //52873000</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><h4 id="字符字面量"><a href="#字符字面量" class="headerlink" title="字符字面量"></a>字符字面量</h4><p>下面这些字符字面量可以出现在字符串的任意位置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">\n                 换行</div><div class="line">\t                 制表</div><div class="line">\b                 退格</div><div class="line">\r                 回车</div><div class="line">\f                 进纸</div><div class="line">\\                 斜杆</div><div class="line">\&apos;                 单引号(&apos;)</div><div class="line">\&quot;                 双引号(&quot;)</div><div class="line">\xnn               以十六进制代码nn表示一个字符（其中n为0～F） 例如\x41</div><div class="line">\unnnn .           以十六进制代码nnnn表示一个Unicode字符（其中n为0～F）例如\u03a3表示希腊字母Σ</div></pre></td></tr></table></figure>
+<h4 id="字符串特点"><a href="#字符串特点" class="headerlink" title="字符串特点"></a>字符串特点</h4><p>ECMAScript中字符串是不可变的，要改变某个变量保存的字符串，首先得销毁原来的字符串，然后再用另外一个字符串进行填充。</p>
+<p><strong>例如：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var lang = &apos;java&apos;;</div><div class="line">lang = lang + &apos;script&apos;;</div></pre></td></tr></table></figure></p>
+<p>上述操作过程中首先创建一个能容纳10个字符的新字符串，然后在这个新的字符串中填充’java’和’script’， 最后一步销毁’java’和’script’.</p>
+<h4 id="转换为字符串"><a href="#转换为字符串" class="headerlink" title="转换为字符串"></a>转换为字符串</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">数值、布尔值、对象和字符串都有toString()方法，但是null和undefined没有这个方法（每个字符串toSyring()后返回字符串的一个副本）</div><div class="line">可通过给toString()传递一个数值参数用于转换进制</div><div class="line"></div><div class="line">var num = 10;</div><div class="line">num.toString()             //&apos;10&apos;</div><div class="line">num.toString(2)            //&apos;1010&apos;</div><div class="line">num.toString(8)            //&apos;12&apos;</div><div class="line">num.toString(10)           //&apos;10&apos;</div><div class="line">num.toString(16)           //&apos;a&apos;</div></pre></td></tr></table></figure>
+<p>null和undefined不能被toString转换，但是可以使用String();<br>String()函数遵循下列转换规则</p>
+<ul>
+<li>如果有toString()方法则调用该方法（没有参数）并返回相应结果</li>
+<li>如果值是null，则返回’null’</li>
+<li>如果值是undefined，则返回’undefined’</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var value1 = 10;</div><div class="line">var value2 = true;</div><div class="line">var value3 = null;</div><div class="line">var value4;</div><div class="line"></div><div class="line">String(value1);  //&apos;10&apos;</div><div class="line">String(value2);  //&apos;true&apos;</div><div class="line">String(value3);  //&apos;null&apos;</div><div class="line">String(value4);  //&apos;undefined&apos;</div></pre></td></tr></table></figure>
+<h3 id="object类型"><a href="#object类型" class="headerlink" title="object类型"></a>object类型</h3><ul>
+<li>ECMAScript中的对象其实就是一组数据和功能的集合</li>
+<li>在ECMAScript中object类型是所有它的实例的基础，换句话或Object类型所具有的任何属性和方法都存在于跟具体的对象中。（原型链）</li>
+<li>object的每个实例都具有下列的属性和方法<ul>
+<li>constructor：保存着用于创建当前对象的函数</li>
+<li>hasOwnProperty(propertyName): 用于检查给定的属性在当前对象实例中（而非实例的原型中）是否存在，参数propertyName必须为字符串。</li>
+<li>isprototypeOf(object): 用于检查传入的对象是否是当前对象的原型 //@question</li>
+<li>propertyIsEnumerable(propertyName): 用于检查给定的属性值是否能够使用for-in语句来枚举 propertyName必须为字符串</li>
+<li>toLocaleString(): 返回对象的字符串表示，该字符串与执行环境的地区对应 (d = new Date() d.toLocaleString())  //@question</li>
+<li>toString(): 返回对象的字符串表示</li>
+<li>valueOf(): 返回对象的字符串、数值或布尔值表示  //@question</li>
+</ul>
+</li>
+</ul>
+
       
     </div>
 
@@ -565,7 +599,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017-03-14/jsBase1.html"
-           data-title="js基础" data-url="http://ssstone.cn/2017-03-14/jsBase1.html">
+           data-title="js基础（1）" data-url="http://ssstone.cn/2017-03-14/jsBase1.html">
       </div>
     
   </div>
@@ -705,7 +739,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一些容易遗忘的概念"><span class="nav-number">2.</span> <span class="nav-text">一些容易遗忘的概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#严格模式"><span class="nav-number">2.1.</span> <span class="nav-text">严格模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键字"><span class="nav-number">2.2.</span> <span class="nav-text">关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#保留字"><span class="nav-number">2.3.</span> <span class="nav-text">保留字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型转化"><span class="nav-number">2.4.</span> <span class="nav-text">数据类型转化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0与-0"><span class="nav-number">2.5.</span> <span class="nav-text">+0与-0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮点数值"><span class="nav-number">2.6.</span> <span class="nav-text">浮点数值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数值范围"><span class="nav-number">2.7.</span> <span class="nav-text">数值范围</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NaN"><span class="nav-number">2.8.</span> <span class="nav-text">NaN</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特点"><span class="nav-number">2.8.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#isNaN"><span class="nav-number">2.8.2.</span> <span class="nav-text">isNaN()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数值转换"><span class="nav-number">2.9.</span> <span class="nav-text">数值转换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#非数值转换为数值"><span class="nav-number">2.9.1.</span> <span class="nav-text">非数值转换为数值</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Number"><span class="nav-number">2.9.1.1.</span> <span class="nav-text">Number()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#parseInt"><span class="nav-number">2.9.1.2.</span> <span class="nav-text">parseInt()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#parseFloat"><span class="nav-number">2.9.1.3.</span> <span class="nav-text">parseFloat()</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一些容易遗忘的概念"><span class="nav-number">2.</span> <span class="nav-text">一些容易遗忘的概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#严格模式"><span class="nav-number">2.1.</span> <span class="nav-text">严格模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键字"><span class="nav-number">2.2.</span> <span class="nav-text">关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#保留字"><span class="nav-number">2.3.</span> <span class="nav-text">保留字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型转化"><span class="nav-number">2.4.</span> <span class="nav-text">数据类型转化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0与-0"><span class="nav-number">2.5.</span> <span class="nav-text">+0与-0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮点数值"><span class="nav-number">2.6.</span> <span class="nav-text">浮点数值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数值范围"><span class="nav-number">2.7.</span> <span class="nav-text">数值范围</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NaN"><span class="nav-number">2.8.</span> <span class="nav-text">NaN</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特点"><span class="nav-number">2.8.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#isNaN"><span class="nav-number">2.8.2.</span> <span class="nav-text">isNaN()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数值转换"><span class="nav-number">2.9.</span> <span class="nav-text">数值转换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#非数值转换为数值"><span class="nav-number">2.9.1.</span> <span class="nav-text">非数值转换为数值</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Number"><span class="nav-number">2.9.1.1.</span> <span class="nav-text">Number()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#parseInt"><span class="nav-number">2.9.1.2.</span> <span class="nav-text">parseInt()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#parseFloat"><span class="nav-number">2.9.1.3.</span> <span class="nav-text">parseFloat()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串"><span class="nav-number">2.9.2.</span> <span class="nav-text">字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#字符字面量"><span class="nav-number">2.9.2.1.</span> <span class="nav-text">字符字面量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串特点"><span class="nav-number">2.9.2.2.</span> <span class="nav-text">字符串特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#转换为字符串"><span class="nav-number">2.9.2.3.</span> <span class="nav-text">转换为字符串</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#object类型"><span class="nav-number">2.9.3.</span> <span class="nav-text">object类型</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

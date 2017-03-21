@@ -115,15 +115,15 @@
 一些容易遗忘的概念严格模式ECMAScript5引入严格模式12“use strict”;//函数体
 关键字关键字可用来表示控制语句的开始或结束，或者用于执行特定操作break  case  catch  continue  debugger  default">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js基础（1）">
+<meta property="og:title" content="js基础（一）">
 <meta property="og:url" content="http://ssstone.cn/2017-03-14/jsBase1.html">
 <meta property="og:site_name" content="三生石@部落格">
 <meta property="og:description" content="写在前面最近总是有莫名的压力呀，年纪小的技术比我好，基础比我扎实，这个不是什么好迹象，现在开始重拾js基础，以前做的承诺真是极少实现了呀！
 一些容易遗忘的概念严格模式ECMAScript5引入严格模式12“use strict”;//函数体
 关键字关键字可用来表示控制语句的开始或结束，或者用于执行特定操作break  case  catch  continue  debugger  default">
-<meta property="og:updated_time" content="2017-03-21T15:27:43.000Z">
+<meta property="og:updated_time" content="2017-03-21T17:01:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js基础（1）">
+<meta name="twitter:title" content="js基础（一）">
 <meta name="twitter:description" content="写在前面最近总是有莫名的压力呀，年纪小的技术比我好，基础比我扎实，这个不是什么好迹象，现在开始重拾js基础，以前做的承诺真是极少实现了呀！
 一些容易遗忘的概念严格模式ECMAScript5引入严格模式12“use strict”;//函数体
 关键字关键字可用来表示控制语句的开始或结束，或者用于执行特定操作break  case  catch  continue  debugger  default">
@@ -160,7 +160,7 @@
 
 
 
-  <title> js基础（1） | 三生石@部落格 </title>
+  <title> js基础（一） | 三生石@部落格 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -358,7 +358,7 @@
             
             
               
-                js基础（1）
+                js基础（一）
               
             
           </h1>
@@ -503,6 +503,37 @@
 </ul>
 </li>
 </ul>
+<h3 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h3><h4 id="一元递增、递减操作符"><a href="#一元递增、递减操作符" class="headerlink" title="一元递增、递减操作符"></a>一元递增、递减操作符</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var num1 = 2;</div><div class="line">var num2 = 20;</div><div class="line">var num3 = num1-- + num2; //22</div><div class="line">var num4 = num1 + num2;   //21</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var num1 = 2;</div><div class="line">var num2 = 20;</div><div class="line">var num3 = --num1 + num2; //21</div><div class="line">var num4 = num1 + num2;   //21</div></pre></td></tr></table></figure>
+<p>由上述例子可以看出++或–放在变量后面并不会改变语句的结果（不会自执行）</p>
+<p>递增++与递减–遵循以下规则</p>
+<ul>
+<li>包含有效数字字符串，例：’123’<ul>
+<li>先将其转换为数字值，再执行加减1的操作。字符串变量变成数值变量</li>
+</ul>
+</li>
+<li>不包含有效数字字符的字符串，例：’erty’<ul>
+<li>将会将变量的值变为NaN</li>
+</ul>
+</li>
+<li>布尔值false时<ul>
+<li>先将其转换为0，再执行加减1的操作</li>
+</ul>
+</li>
+<li>布尔值true时<ul>
+<li>先将其转换为1，再执行加减1的操作</li>
+</ul>
+</li>
+<li>浮点数值时<ul>
+<li>执行加减1的操作</li>
+</ul>
+</li>
+<li>对象时<ul>
+<li>先调用对象的valueOf()方法，取得一个可供操作的值，然后对该值应用前述规则，  如果结果为NaN，则在调用toString()方法后再应用前述规则</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">var a = &apos;2&apos;;</div><div class="line">var b = &apos;z&apos;;</div><div class="line">var c = false;</div><div class="line">var d = 1.1;</div><div class="line">var e = &#123;</div><div class="line">  valueOf: function () &#123;</div><div class="line">    return 1</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">a++;              //值变成了数值3</div><div class="line">b++;              //值变成了NaN</div><div class="line">c++;              //值变成了数值1</div><div class="line">d++;              //值变成了2.1</div><div class="line">e++;              //值变成了数值2</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -599,7 +630,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017-03-14/jsBase1.html"
-           data-title="js基础（1）" data-url="http://ssstone.cn/2017-03-14/jsBase1.html">
+           data-title="js基础（一）" data-url="http://ssstone.cn/2017-03-14/jsBase1.html">
       </div>
     
   </div>
@@ -739,7 +770,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一些容易遗忘的概念"><span class="nav-number">2.</span> <span class="nav-text">一些容易遗忘的概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#严格模式"><span class="nav-number">2.1.</span> <span class="nav-text">严格模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键字"><span class="nav-number">2.2.</span> <span class="nav-text">关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#保留字"><span class="nav-number">2.3.</span> <span class="nav-text">保留字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型转化"><span class="nav-number">2.4.</span> <span class="nav-text">数据类型转化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0与-0"><span class="nav-number">2.5.</span> <span class="nav-text">+0与-0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮点数值"><span class="nav-number">2.6.</span> <span class="nav-text">浮点数值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数值范围"><span class="nav-number">2.7.</span> <span class="nav-text">数值范围</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NaN"><span class="nav-number">2.8.</span> <span class="nav-text">NaN</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特点"><span class="nav-number">2.8.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#isNaN"><span class="nav-number">2.8.2.</span> <span class="nav-text">isNaN()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数值转换"><span class="nav-number">2.9.</span> <span class="nav-text">数值转换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#非数值转换为数值"><span class="nav-number">2.9.1.</span> <span class="nav-text">非数值转换为数值</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Number"><span class="nav-number">2.9.1.1.</span> <span class="nav-text">Number()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#parseInt"><span class="nav-number">2.9.1.2.</span> <span class="nav-text">parseInt()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#parseFloat"><span class="nav-number">2.9.1.3.</span> <span class="nav-text">parseFloat()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串"><span class="nav-number">2.9.2.</span> <span class="nav-text">字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#字符字面量"><span class="nav-number">2.9.2.1.</span> <span class="nav-text">字符字面量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串特点"><span class="nav-number">2.9.2.2.</span> <span class="nav-text">字符串特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#转换为字符串"><span class="nav-number">2.9.2.3.</span> <span class="nav-text">转换为字符串</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#object类型"><span class="nav-number">2.9.3.</span> <span class="nav-text">object类型</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一些容易遗忘的概念"><span class="nav-number">2.</span> <span class="nav-text">一些容易遗忘的概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#严格模式"><span class="nav-number">2.1.</span> <span class="nav-text">严格模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键字"><span class="nav-number">2.2.</span> <span class="nav-text">关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#保留字"><span class="nav-number">2.3.</span> <span class="nav-text">保留字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型转化"><span class="nav-number">2.4.</span> <span class="nav-text">数据类型转化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0与-0"><span class="nav-number">2.5.</span> <span class="nav-text">+0与-0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮点数值"><span class="nav-number">2.6.</span> <span class="nav-text">浮点数值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数值范围"><span class="nav-number">2.7.</span> <span class="nav-text">数值范围</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NaN"><span class="nav-number">2.8.</span> <span class="nav-text">NaN</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特点"><span class="nav-number">2.8.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#isNaN"><span class="nav-number">2.8.2.</span> <span class="nav-text">isNaN()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数值转换"><span class="nav-number">2.9.</span> <span class="nav-text">数值转换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#非数值转换为数值"><span class="nav-number">2.9.1.</span> <span class="nav-text">非数值转换为数值</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Number"><span class="nav-number">2.9.1.1.</span> <span class="nav-text">Number()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#parseInt"><span class="nav-number">2.9.1.2.</span> <span class="nav-text">parseInt()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#parseFloat"><span class="nav-number">2.9.1.3.</span> <span class="nav-text">parseFloat()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串"><span class="nav-number">2.9.2.</span> <span class="nav-text">字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#字符字面量"><span class="nav-number">2.9.2.1.</span> <span class="nav-text">字符字面量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串特点"><span class="nav-number">2.9.2.2.</span> <span class="nav-text">字符串特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#转换为字符串"><span class="nav-number">2.9.2.3.</span> <span class="nav-text">转换为字符串</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#object类型"><span class="nav-number">2.9.3.</span> <span class="nav-text">object类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作符"><span class="nav-number">2.9.4.</span> <span class="nav-text">操作符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一元递增、递减操作符"><span class="nav-number">2.9.4.1.</span> <span class="nav-text">一元递增、递减操作符</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>

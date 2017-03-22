@@ -115,11 +115,10 @@
 
 当前使用gulp版本为3.9.1
 
-gulp的Api第一次使用gulp的话可以结合下面的教程看Api
-看英文文档主要使用的好像一共就4个api
+gulp的Api看英文文档主要使用的好像一共就5个api
 
 gulp.src                     //读取文件
-gulp">
+gulp.dest">
 <meta property="og:type" content="article">
 <meta property="og:title" content="gulp">
 <meta property="og:url" content="http://ssstone.cn/2017-03-22/gulp.html">
@@ -128,23 +127,21 @@ gulp">
 
 当前使用gulp版本为3.9.1
 
-gulp的Api第一次使用gulp的话可以结合下面的教程看Api
-看英文文档主要使用的好像一共就4个api
+gulp的Api看英文文档主要使用的好像一共就5个api
 
 gulp.src                     //读取文件
-gulp">
-<meta property="og:updated_time" content="2017-03-22T03:41:56.000Z">
+gulp.dest">
+<meta property="og:updated_time" content="2017-03-22T11:27:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gulp">
 <meta name="twitter:description" content="写在前面昨天跟着教程写了一下gulp对开发环境自动化的构建，发现比webpack（当前最火的前端资源模块化管理和打包工具）入门简单多了，所以先写gulp再写webpack
 
 当前使用gulp版本为3.9.1
 
-gulp的Api第一次使用gulp的话可以结合下面的教程看Api
-看英文文档主要使用的好像一共就4个api
+gulp的Api看英文文档主要使用的好像一共就5个api
 
 gulp.src                     //读取文件
-gulp">
+gulp.dest">
 
 
 
@@ -441,16 +438,21 @@ gulp">
 <ul>
 <li>当前使用gulp版本为3.9.1</li>
 </ul>
-<h1 id="gulp的Api"><a href="#gulp的Api" class="headerlink" title="gulp的Api"></a>gulp的Api</h1><p>第一次使用gulp的话可以结合下面的教程看Api</p>
-<p>看英文文档主要使用的好像一共就4个api</p>
+<h1 id="gulp的Api"><a href="#gulp的Api" class="headerlink" title="gulp的Api"></a>gulp的Api</h1><p>看英文文档主要使用的好像一共就5个api</p>
 <ul>
 <li>gulp.src                     //读取文件</li>
 <li>gulp.dest                    //输出文件</li>
 <li>gulp.task                    //定义任务</li>
 <li>gulp.watch                   //监听文件改变</li>
+<li>gulp.run(tasks…)           //尽可能多的并行运行多个task</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">gulp.src(globs[,options])</div><div class="line">gulp.dest(path[,options])</div><div class="line"></div><div class="line">gulp.src(&apos;读取对应文件地址&apos;)</div><div class="line">    .pipe(xxxxx)                   //做一些不可描述的事情，例如babel转译</div><div class="line">    .pipe(XXXXX)                   //做一些不可描述的事情比如less转css</div><div class="line">    .pipe(gulp.dest(&apos;输出到对应文件夹中&apos;))</div><div class="line"></div><div class="line">读取对应文件地址一般这么写： src/**/*.js  读取src下面的所有js</div><div class="line">输出到对应文件夹中：        bin          输出到bin文件下</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">gulp.task(name[,deps][,fn])</div><div class="line"></div><div class="line">gulp.task(&apos;main&apos;, [build], function () =&gt; &#123;</div><div class="line">    //Do stuff</div><div class="line">&#125;)</div><div class="line"></div><div class="line">定义名字为&apos;main&apos;的task任务</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">//gulp.src(globs[, options]) 执行任务处理的文件  globs：处理的文件路径(字符串或者字符串数组) </div><div class="line">//gulp.dest(path[, options]) 处理完后文件生成路径</div><div class="line"></div><div class="line">gulp.src(&apos;读取对应文件地址&apos;)</div><div class="line">    .pipe(xxxxx)                   //做一些不可描述的事情，例如babel转译</div><div class="line">    .pipe(XXXXX)                   //做一些不可描述的事情比如less转css</div><div class="line">    .pipe(gulp.dest(&apos;输出到对应文件夹中&apos;))</div><div class="line"></div><div class="line">读取对应文件地址一般这么写： src/**/*.js  读取src下面的所有js</div><div class="line">输出到对应文件夹中：        bin          输出到bin文件下</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">//gulp.task(name[, deps], fn) 定义任务  name：任务名称 deps：依赖任务名称 fn：回调函数</div><div class="line"></div><div class="line">gulp.task(&apos;main&apos;, [build], function () =&gt; &#123;</div><div class="line">    //Do stuff</div><div class="line">&#125;)</div><div class="line"></div><div class="line">定义名字为&apos;main&apos;的task任务,依赖于build任务</div><div class="line">在build任务执行后再执行//Do stuff</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">//gulp.watch(glob [, options], tasks) or gulp.watch(glob [, options, cb])</div><div class="line">//glob: 需要处理的源文件匹配路径 类型：String or Array</div><div class="line">//options: </div><div class="line">//tasks: 依赖任务</div><div class="line">//cb: 每个文件变化后执行的回调函数  </div><div class="line"></div><div class="line">gulp.task(&apos;watch&apos;, function () =&gt; &#123;</div><div class="line">    gulp.watch(&apos;监听的文件&apos;，[执行的依赖任务（stringArray）])</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(&apos;watch&apos;, function () =&gt; &#123;</div><div class="line">    gulp.watch(&apos;监听的文件&apos;，(event) =&gt; &#123;</div><div class="line">        console.log(&apos;File&apos; + event.path + &apos;was&apos; + event.type + &apos;, running tasks...&apos;)</div><div class="line">    &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h1 id="gulp之代码压缩"><a href="#gulp之代码压缩" class="headerlink" title="gulp之代码压缩"></a>gulp之代码压缩</h1><p>上边讲的只是单纯讲一个文件按照原样的转移到另外一个文件中，现在我们试着对html js css等文件进行压缩</p>
+<h2 id="gulp-htmlmin压缩html"><a href="#gulp-htmlmin压缩html" class="headerlink" title="gulp-htmlmin压缩html"></a>gulp-htmlmin压缩html</h2><p>首先在开发环境安装一个模块 gulp-htmlmin<br>在命令行中输入 npm install gulp-htmlmin –save-dev</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var gulp = require(&apos;gulp&apos;);</div><div class="line">var htmlmin = require(&apos;gulp-htmlmin&apos;);</div><div class="line"></div><div class="line">var htmlminOpts = &#123;</div><div class="line">    removeComents: true,</div><div class="line">&#125;</div><div class="line">gulp.task(&apos;main&apos;)</div></pre></td></tr></table></figure>
+<h2 id="gulp-ES6转ES5"><a href="#gulp-ES6转ES5" class="headerlink" title="gulp ES6转ES5"></a>gulp ES6转ES5</h2>
       
     </div>
 
@@ -686,7 +688,7 @@ gulp">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gulp的Api"><span class="nav-number">2.</span> <span class="nav-text">gulp的Api</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gulp的Api"><span class="nav-number">2.</span> <span class="nav-text">gulp的Api</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gulp之代码压缩"><span class="nav-number">3.</span> <span class="nav-text">gulp之代码压缩</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#gulp-htmlmin压缩html"><span class="nav-number">3.1.</span> <span class="nav-text">gulp-htmlmin压缩html</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gulp-ES6转ES5"><span class="nav-number">3.2.</span> <span class="nav-text">gulp ES6转ES5</span></a></li></ol></li></ol></div>
             
 
           </div>

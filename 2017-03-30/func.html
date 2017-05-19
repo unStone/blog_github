@@ -125,7 +125,7 @@
 <meta property="og:description" content="写在前面没错我又开了一篇，而且其他的都还没有写完，最近看源码，发现有很多函数我以为是作者自己定义的，没想到在源码中找不到，网上一搜发现是原生的，呵呵呵，这篇文章就记录我看源码发现的一些我不知道的源码吧！
 开始记录Object.keys()
 该函数是获得对象的所有属性，好像不包括原型链上的12345678910var keys = Object.keys;var obj = &amp;#123;aaa: 1">
-<meta property="og:updated_time" content="2017-03-31T01:46:53.000Z">
+<meta property="og:updated_time" content="2017-05-19T05:39:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="看源码有感js原生函数">
 <meta name="twitter:description" content="写在前面没错我又开了一篇，而且其他的都还没有写完，最近看源码，发现有很多函数我以为是作者自己定义的，没想到在源码中找不到，网上一搜发现是原生的，呵呵呵，这篇文章就记录我看源码发现的一些我不知道的源码吧！
@@ -432,7 +432,12 @@
 <li>该方法使用指定的原型对象和其属性创建了一个新的对象。<br>（暂时不是很了解，等熟悉了再写）<br>//todo</li>
 </ul>
 <h2 id="stringObject-toLowerCase"><a href="#stringObject-toLowerCase" class="headerlink" title="stringObject.toLowerCase()"></a>stringObject.toLowerCase()</h2><ul>
-<li>方法用于把字符串转换为小写<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var str = &apos;AAABBBHHjjjHHH&apos;;</div><div class="line"></div><div class="line">console.log(str.toLowerCase())                           //aaabbbhhjjjhhh</div><div class="line">console.log(&apos;中文简体 zh-CN || zh-Hans&apos;.toLowerCase());   //中文简体 zh-cn || zh-hans</div></pre></td></tr></table></figure></li>
+<li>方法用于把字符串转换为小写<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var str = &apos;AAABBBHHjjjHHH&apos;;</div><div class="line"></div><div class="line">console.log(str.toLowerCase())                           //aaabbbhhjjjhhh</div><div class="line">console.log(&apos;中文简体 zh-CN || zh-Hans&apos;.toLowerCase());   //中文简体 zh-cn || zh-hans</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="最大最小数"><a href="#最大最小数" class="headerlink" title="最大最小数"></a>最大最小数</h2><ul>
+<li>返回 JavaScript 中可能的最小值<br>Number.MIN_VALUE</li>
+<li>返回 JavaScript 中可能的最大值<br>Number.MAX_VALUE</li>
 </ul>
 
       
@@ -668,7 +673,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开始记录"><span class="nav-number">2.</span> <span class="nav-text">开始记录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-keys"><span class="nav-number">2.1.</span> <span class="nav-text">Object.keys()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-create"><span class="nav-number">2.2.</span> <span class="nav-text">Object.create()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stringObject-toLowerCase"><span class="nav-number">2.3.</span> <span class="nav-text">stringObject.toLowerCase()</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开始记录"><span class="nav-number">2.</span> <span class="nav-text">开始记录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-keys"><span class="nav-number">2.1.</span> <span class="nav-text">Object.keys()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-create"><span class="nav-number">2.2.</span> <span class="nav-text">Object.create()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stringObject-toLowerCase"><span class="nav-number">2.3.</span> <span class="nav-text">stringObject.toLowerCase()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最大最小数"><span class="nav-number">2.4.</span> <span class="nav-text">最大最小数</span></a></li></ol></li></ol></div>
             
 
           </div>
